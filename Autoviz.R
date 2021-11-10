@@ -6,7 +6,7 @@ setwd("C:\\..")
 
 getwd()
 
-df <- read_csv("CW2_Telco_Churn_Data.csv")
+df <- read_csv("Telco_Churn_Data.csv")
 
 df_new <- df %>% mutate_if(sapply(., is.character),
             as.factor)
@@ -294,7 +294,7 @@ skewness(df_new$Total_Charges)
 kurtosis(df_new$Total_Charges)
 # [1] 2.774914
 
-write.csv(df_new,"CW2_Telco_Churn_Data_cleaned.csv", 
+write.csv(df_new,"Telco_Churn_Data_cleaned.csv", 
           row.names = FALSE)
 
 library(explore)
